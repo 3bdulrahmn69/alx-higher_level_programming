@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if len(sentence) != 0:
-        tu = (len(sentence) , sentence[0])
-        return tu
+    if len(sentence) == 0:
+        re = (0, None)
+        return re
     else:
-        tu = (0, None)
-        return tu
+        re = (len(sentence), sentence[0:1])
+        return re
