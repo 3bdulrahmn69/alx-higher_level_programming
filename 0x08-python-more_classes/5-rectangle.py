@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-Defines a class Rectangle
+an module that have an class -Rectangle- that defines a rectangle
 """
 
 
 class Rectangle:
-    """Representation of a rectangle"""
+    """a class that defines a rectangle"""
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
         self.width = width
