@@ -5,21 +5,16 @@ an module that have an class -Rectangle- that defines a rectangle
 
 
 class Rectangle:
-    """ a class that defines a rectangle """
+    """a class that defines a rectangle"""
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
         self.width = width
         self.height = height
-        
+
     @property
     def width(self):
         """getter for the private instance attribute width"""
         return self.__width
-    
-    @property
-    def height(self):
-        """getter for the private instance attribute height"""
-        return self.__height
 
     @width.setter
     def width(self, value):
@@ -31,6 +26,11 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
         else:
             raise TypeError("width must be an integer")
+
+    @property
+    def height(self):
+        """getter for the private instance attribute height"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -45,14 +45,14 @@ class Rectangle:
 
     def area(self):
         """Public instance method that returns the rectangle area"""
-        return self.__height * self.__width
+        return self.__width * self.__height
 
     def perimeter(self):
         """Public instance method that returns the rectangle perimeter"""
         if self.__height == 0 | self.__width == 0:
             return 0
         return ((2 * self.__height) + (2 * self.__width))
-    
+
     def __str__(self):
         """print the rectangle with the character #"""
         st = ""
@@ -60,7 +60,7 @@ class Rectangle:
             st += "\n".join("#" * self.__width
                                 for j in range(self.__height))
         return st
-    
+
     def __repr__(self):
         """ return a string representation of the rectangle to be able to recreate a new instance by using eval"""
         return f"Rectangle({self.__width}, {self.__height})"

@@ -5,7 +5,7 @@ an module that have an class -Rectangle- that defines a rectangle
 
 
 class Rectangle:
-    """ a class that defines a rectangle """
+    """a class that defines a rectangle"""
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
         self.width = width
@@ -15,11 +15,6 @@ class Rectangle:
     def width(self):
         """getter for the private instance attribute width"""
         return self.__width
-    
-    @property
-    def height(self):
-        """getter for the private instance attribute height"""
-        return self.__height
 
     @width.setter
     def width(self, value):
@@ -31,6 +26,11 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
         else:
             raise TypeError("width must be an integer")
+
+    @property
+    def height(self):
+        """getter for the private instance attribute height"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -45,7 +45,7 @@ class Rectangle:
 
     def area(self):
         """Public instance method that returns the rectangle area"""
-        return self.__height * self.__width
+        return self.__width * self.__height
 
     def perimeter(self):
         """Public instance method that returns the rectangle perimeter"""
