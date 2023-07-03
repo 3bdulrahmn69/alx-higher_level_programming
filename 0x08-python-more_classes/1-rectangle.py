@@ -3,6 +3,7 @@
 an module that have an class -Rectangle- that defines a rectangle
 """
 
+
 class Rectangle:
     """ a class that defines a rectangle """
     def __init__(self, width=0, height=0):
@@ -27,7 +28,7 @@ class Rectangle:
                 self.__width = value
             else:
                 raise ValueError("width must be >= 0")
-        else:
+
             raise TabError("width must be an integer")
 
     
@@ -39,5 +40,4 @@ class Rectangle:
                 self.__height = value
             else:
                 raise ValueError("height must be >= 0")
-        else:
             raise TabError("height must be an integer")
