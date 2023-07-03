@@ -3,6 +3,7 @@
 an module that have an class -Rectangle- that defines a rectangle
 """
 
+
 class Rectangle:
     """a class that defines a rectangle"""
     def __init__(self, width=0, height=0):
@@ -59,4 +60,3 @@ class Rectangle:
     def __repr__(self):
         """return a string representation of the rectangle to be able to recreate a new instance by using eval"""
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
-
