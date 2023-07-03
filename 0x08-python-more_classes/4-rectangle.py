@@ -26,7 +26,6 @@ class Rectangle:
                 raise ValueError("width must be >= 0")
         else:
             raise TypeError("width must be an integer")
-
     @property
     def height(self):
         """getter for the private instance attribute height"""
@@ -48,19 +47,19 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Public instance method that returns the rectangle perimeter"""
-        if self.__height == 0 | self.__width == 0:
-            return 0
-        return ((2 * self.__height) + (2 * self.__width))
+       """Public instance method that returns the rectangle perimeter"""
+       if self.__height == 0 | self.__width == 0:
+           return 0
+       return ((2 * self.__height) + (2 * self.__width))
 
     def __str__(self):
         """print the rectangle with the character #"""
-        st = ""
+        string = ""
         if self.__width != 0 and self.__height != 0:
-            st += "\n".join("#" * self.__width
+            string += "\n".join("#" * self.__width
                                 for j in range(self.__height))
-        return st
-
+        return string
+    
     def __repr__(self):
-        """ return a string representation of the rectangle to be able to recreate a new instance by using eval"""
+        """return a string representation of the rectangle to be able to recreate a new instance by using eval"""
         return f"Rectangle({self.__width}, {self.__height})"
