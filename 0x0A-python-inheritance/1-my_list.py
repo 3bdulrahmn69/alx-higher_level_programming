@@ -5,11 +5,11 @@ module that contains a class that inherits from list
 
 
 class MyList(list):
-    """a class that inherits from list"""
+    """a subclass of list"""
     def __init__(self):
-        """initializes"""
+        """initializes the object"""
         super().__init__()
-    
+
     def print_sorted(self):
         """prints the sorted list"""
         print(sorted(self))
