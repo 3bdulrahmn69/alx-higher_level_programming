@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 """
-module that contains a class Square that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py)
+module that contains a class Square that inherits from Rectangle (9-rectangle.py)
 """
 
+
 Rectangle = __import__('9-rectangle').Rectangle
-    
-    
+
+
 class Square(Rectangle):
-    """a class that inherits from Rectangle (9-rectangle.py). (task based on 10-square.py)."""
+    """a class that inherits from Rectangle"""
     def __init__(self, size):
         """Instantiation"""
         self.integer_validator("size", size)
