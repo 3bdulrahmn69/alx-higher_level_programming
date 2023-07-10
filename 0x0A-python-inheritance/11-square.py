@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module that contains a class Square that inherits from Rectangle (9-rectangle.py)
+module that contains a class Square that inherits from Rectangle
 """
 
 
