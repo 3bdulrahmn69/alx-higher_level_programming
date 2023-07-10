@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module that contains a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py) 
+module that contains a class Rectangle that inherits from BaseGeometry (7-base_geometry.py). (task based on 8-rectangle.py)
 """
 
 
@@ -16,11 +16,11 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
-        
+
     def area(self):
         """area method implemented"""
         return self.__height * self.__width
-    
+
     def __str__(self):
         """rectangle description"""
         return f"[Rectangle] {self.__width}/{self.__height}"

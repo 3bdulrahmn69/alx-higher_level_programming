@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module that contains a class Square that inherits from Rectangle (9-rectangle.py):
+module that contains a class Square that inherits from Rectangle (9-rectangle.py)
 """
 
 
@@ -14,7 +14,7 @@ class Square(Rectangle):
         self.integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
-        
+
     def area(self):
         """area method implemented"""
         return self.__size * self.__size
