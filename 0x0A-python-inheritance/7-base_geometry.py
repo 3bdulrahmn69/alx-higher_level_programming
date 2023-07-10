@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-module that contains a class BaseGeometry (based on 6-base_geometry.py). 
+module that contains a class BaseGeometry (based on 6-base_geometry.py).
 """
 
 
