@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-module that contains a function that returns True if the object is exactly an instance of the specified class
+module that contains a function that returns True
 """
 
 
 def is_same_class(obj, a_class):
-    """returns True if the object is exactly an instance of the specified class; otherwise False"""
+    """returns True if the object is exactly an instance"""
     if type(obj) == a_class:
         return True
     else:
