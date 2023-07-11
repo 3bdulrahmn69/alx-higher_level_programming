@@ -8,6 +8,7 @@ def pascal_triangle(n):
     integers representing the Pascal’s triangle of n"""
     if n <= 0:
         return []
+
     triangles = [[1]]
     while len(triangles) != n:
         tri = triangles[-1]
