@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-
-""" 
+"""
 Base module class
 """
-
 import json
 
 
@@ -30,7 +28,7 @@ class Base:
         else:
             self.id = id
 
-    @staticmethod        
+    @staticmethod
     def to_json_string(list_dictionaries):
         """
         Return the JSON serialization of a list of dicts
@@ -41,7 +39,6 @@ class Base:
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
-
 
     @classmethod
     def save_to_file(cls, list_objs):
@@ -59,7 +56,6 @@ class Base:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
 
-
     @staticmethod
     def from_json_string(json_string):
         """
@@ -75,7 +71,6 @@ class Base:
         if json_string == None or json_string == "[]":
             return []
         return json.loads(json_string)
-
 
     @classmethod
     def create(cls, **dictionary):
@@ -97,7 +92,7 @@ class Base:
     @classmethod
     def load_from_file(cls):
         """
-        Return a list of classes instantiated from a file of JSON strings 
+        Return a list of classes instantiated from a file of JSON strings
         Reads from `<cls.__name__>.json`
 
         Returns:
