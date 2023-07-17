@@ -36,7 +36,7 @@ class Rectangle(Base):
     @property
     def width(self):
         """
-        Get/set the width of the retangle.
+        Get/set the x of the retangle.
         Returns:
             The width of the retangle.
         """
@@ -53,8 +53,7 @@ class Rectangle(Base):
     @property
     def height(self):
         """
-        Get/set the height of the retangle.
-        
+        Get/set the x of the retangle.
         Returns:
             The height of the retangle.
         """
@@ -72,7 +71,6 @@ class Rectangle(Base):
     def x(self):
         """
         Get/set the x of the retangle.
-        
         Returns:
             The x of the retangle.
         """
@@ -90,7 +88,6 @@ class Rectangle(Base):
     def y(self):
         """
         Get/set the x of the retangle.
-        
         Returns:
             The y of the retangle.
         """
@@ -105,25 +102,23 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """
-        Returns:
-            Area of the Rectangle.
-        """
+        """Return the area of the Rectangle."""
         return self.width * self.height
 
     def display(self):
-        """
-        print te Rectangle using "#" character.
-        """
+        """Print the Rectangle using the `#` character."""
         if self.width == 0 or self.height == 0:
             print("")
             return
 
-        [print("") for y in range(self.y)]
-        for h in range(self.height):
-            [print(" ", end="") for x in range(self.x)]
-            [print("#", end="") for w in range(self.width)]
-            print("")
+        for y in range(self.y):
+            print()
+        for z in range(self.height):
+            for x in range(self.x):
+                    print(" ", end="")
+            for i in range(self.width):
+                print("#", end="")
+            print()
 
     def update(self, *args, **kwargs):
         """
