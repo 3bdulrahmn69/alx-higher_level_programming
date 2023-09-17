@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" 
-script that lists all State objects that contain the letter
+""" prints the first State object from the database
 """
 import sys
 from model_state import Base, State
